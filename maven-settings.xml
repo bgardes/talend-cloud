@@ -45,15 +45,15 @@
                     <layout>default</layout>
                 </pluginRepository>
                 <pluginRepository>
-                    <id>talend-custom-libs-snapshot</id>
-                    <name>plugins_snapshot</name>
-                    <url>${INPUT_NEXUS_URL}/repository/talend-custom-libs-snapshot/</url>
-                    <layout>default</layout>
-                </pluginRepository>
-                <pluginRepository>
                     <id>talend-custom-libs-release</id>
                     <name>plugins_release</name>
                     <url>${INPUT_NEXUS_URL}/repository/talend-custom-libs-release/</url>
+                    <layout>default</layout>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>talend-custom-libs-snapshot</id>
+                    <name>plugins_snapshot</name>
+                    <url>${INPUT_NEXUS_URL}/repository/talend-custom-libs-snapshot/</url>
                     <layout>default</layout>
                 </pluginRepository>
             </pluginRepositories>
