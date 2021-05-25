@@ -5,7 +5,7 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 # Decrypt the license file
 mkdir $HOME/secrets
-gpg --quiet --batch --yes --decrypt --passphrase="${LICENSE_PASSPHRASE}" \
+gpg --quiet --batch --yes --decrypt --passphrase="${INPUT_LICENSE_PASSPHRASE}" \
 --output $HOME/secrets/license "${INPUT_LICENSE_PATH}"
 
 echo "Hello Talend user, thank you for using this Github Action"

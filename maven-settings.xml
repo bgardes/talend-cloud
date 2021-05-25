@@ -10,8 +10,8 @@
         </server>
         <server>
             <id>talend-custom-libs-snapshot</id>
-            <username>${NEXUS_USERNAME}</username>
-            <password>${NEXUS_PASSWORD}</password>
+            <username>${INPUT_NEXUS_USERNAME}</username>
+            <password>${INPUT_NEXUS_PASSWORD}</password>
         </server>
     </servers>   
     <profiles>
