@@ -13,17 +13,17 @@
             <username>${INPUT_NEXUS_USERNAME}</username>
             <password>${INPUT_NEXUS_PASSWORD}</password>
         </server>
-        <!-- credentials to access the maven plugins -->
-        <server>            <!-- central (as proxy) -->
-            <id>central</id>
-            <username>${INPUT_NEXUS_USERNAME}</username>
-            <password>${INPUT_NEXUS_PASSWORD}</password>
-        </server>
     </servers>   
     <profiles>
         <profile>
             <id>talend-ci</id>
             <repositories>
+				<repository>
+                    <id>central</id>
+                    <name>central</name>
+                    <url>https://repo1.maven.org/maven2/</url>
+                    <layout>default</layout>
+                </repository>
                 <repository>
                     <id>talend-custom-libs-release</id>
                     <name>talend-custom-libs-release</name>
@@ -36,14 +36,14 @@
                     <url>${INPUT_NEXUS_URL}/repository/talend-custom-libs-snapshot/</url>
                     <layout>default</layout>
                 </repository>
-				<repository>
-                    <id>central</id>
-                    <name>central</name>
-                    <url>${INPUT_NEXUS_URL}/repository/maven-central/</url>
-                    <layout>default</layout>
-                </repository>
             </repositories>
             <pluginRepositories>
+				<pluginRepository>
+                    <id>central</id>
+                    <name>central</name>
+                    <url>https://repo1.maven.org/maven2/</url>
+                    <layout>default</layout>
+                </pluginRepository>
                 <pluginRepository>
                     <id>talend-custom-libs-snapshot</id>
                     <name>plugins_snapshot</name>
@@ -54,12 +54,6 @@
                     <id>talend-custom-libs-release</id>
                     <name>plugins_release</name>
                     <url>${INPUT_NEXUS_URL}/repository/talend-custom-libs-release/</url>
-                    <layout>default</layout>
-                </pluginRepository>
-				<pluginRepository>
-                    <id>central</id>
-                    <name>central</name>
-                    <url>${INPUT_NEXUS_URL}/repository/maven-central/</url>
                     <layout>default</layout>
                 </pluginRepository>
             </pluginRepositories>

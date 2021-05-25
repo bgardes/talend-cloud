@@ -26,4 +26,4 @@ export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license \
 # Maven command
 sh -c "mvn -s /maven-settings.xml \
            -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/poms/pom.xml \
-           -Pcloud-publisher clean deploy -fn -e -pl jobs/process/GRU_002_PULL_DB_0.1 -am"
+           -Pcloud-publisher clean deploy $*"
