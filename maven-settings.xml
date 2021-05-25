@@ -24,6 +24,12 @@
                     <url>https://repo1.maven.org/maven2/</url>
                     <layout>default</layout>
                 </repository>
+				<repository>
+                    <id>central</id>
+                    <name>central</name>
+                    <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease</url>
+                    <layout>default</layout>
+                </repository>
                 <repository>
                     <id>talend-custom-libs-release</id>
                     <name>talend-custom-libs-release</name>
@@ -42,6 +48,12 @@
                     <id>central</id>
                     <name>central</name>
                     <url>https://repo1.maven.org/maven2/</url>
+                    <layout>default</layout>
+                </pluginRepository>
+				<pluginRepository>
+                    <id>central</id>
+                    <name>central</name>
+                    <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease</url>
                     <layout>default</layout>
                 </pluginRepository>
                 <pluginRepository>
