@@ -17,6 +17,6 @@ export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license \
                    -DaltDeploymentRepository=releases::default::http://bycnit-jenkins.westeurope.cloudapp.azure.com:8081/repository/talend-custom-libs-release/"
 
 # Maven command
-sh -c "mvn -s /maven-settings.xml \
+sh -c "mvn -X -e -s /maven-settings.xml \
            -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/poms/pom.xml \
  clean deploy $*"
