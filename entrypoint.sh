@@ -12,10 +12,7 @@ echo "Hello Talend user, thank you for using this Github Action"
 echo "You selected ${INPUT_PROJECT} project"
 
 # Set maven options
-export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license \
-                   -Dupdatesite.path=${INPUT_UPDATESITE_PATH} \
-                   -Dservice.url=${INPUT_SERVICE_URL} \
-                   -Dservice.accelerate=${INPUT_SERVICE_ACCELERATE} \
+export MAVEN_OPTS="-Dupdatesite.path=${INPUT_UPDATESITE_PATH} \
                    -DaltDeploymentRepository=releases::default::http://bycnit-jenkins.westeurope.cloudapp.azure.com:8081/repository/talend-custom-libs-release/"
 
 # Maven command
