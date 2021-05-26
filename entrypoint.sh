@@ -14,7 +14,7 @@ echo "You selected ${INPUT_PROJECT} project"
 # Set maven options
 export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license \
                    -Dupdatesite.path=${INPUT_UPDATESITE_PATH} \
-                   -DaltDeploymentRepository=snapshots::default::http://bycnit-jenkins.westeurope.cloudapp.azure.com:8081/repository/talend-custom-libs-snapshot/"
+                   -DaltDeploymentRepository=talend-custom-libs-release::default::http://bycnit-jenkins.westeurope.cloudapp.azure.com:8081/repository/talend-custom-libs-release/"
 
 # Maven command
 sh -c "mvn -X -e -s /maven-settings.xml \
