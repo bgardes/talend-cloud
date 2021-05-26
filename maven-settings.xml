@@ -18,18 +18,6 @@
         <profile>
             <id>talend-ci</id>
             <repositories>
-				<repository>
-                    <id>central</id>
-                    <name>central</name>
-                    <url>https://repo1.maven.org/maven2/</url>
-                    <layout>default</layout>
-                </repository>
-				<repository>
-                    <id>central2</id>
-                    <name>central2</name>
-                    <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease</url>
-                    <layout>default</layout>
-                </repository>
                 <repository>
                     <id>talend-custom-libs-release</id>
                     <name>talend-custom-libs-release</name>
@@ -42,20 +30,20 @@
                     <url>${INPUT_NEXUS_URL}/repository/talend-custom-libs-snapshot/</url>
                     <layout>default</layout>
                 </repository>
-            </repositories>
-            <pluginRepositories>
-				<pluginRepository>
+				<repository>
                     <id>central</id>
                     <name>central</name>
                     <url>https://repo1.maven.org/maven2/</url>
                     <layout>default</layout>
-                </pluginRepository>
-				<pluginRepository>
+                </repository>
+				<repository>
                     <id>central2</id>
                     <name>central2</name>
                     <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease</url>
                     <layout>default</layout>
-                </pluginRepository>
+                </repository>
+            </repositories>
+            <pluginRepositories>
                 <pluginRepository>
                     <id>talend-custom-libs-release</id>
                     <name>plugins_release</name>
@@ -66,6 +54,18 @@
                     <id>talend-custom-libs-snapshot</id>
                     <name>plugins_snapshot</name>
                     <url>${INPUT_NEXUS_URL}/repository/talend-custom-libs-snapshot/</url>
+                    <layout>default</layout>
+                </pluginRepository>
+				<pluginRepository>
+                    <id>central</id>
+                    <name>central</name>
+                    <url>https://repo1.maven.org/maven2/</url>
+                    <layout>default</layout>
+                </pluginRepository>
+				<pluginRepository>
+                    <id>central2</id>
+                    <name>central2</name>
+                    <url>https://artifacts-oss.talend.com/nexus/content/repositories/TalendOpenSourceRelease</url>
                     <layout>default</layout>
                 </pluginRepository>
             </pluginRepositories>
