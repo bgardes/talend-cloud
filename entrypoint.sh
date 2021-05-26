@@ -26,5 +26,10 @@ export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license \
 
 # Maven command
 sh -c "mvn -s /maven-settings.xml \
+           -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/jobs/joblets/jl_add_query_tag_0.1/pom.xml \
+           clean deploy $*"
+
+ echo "You selected ${INPUT_PROJECT} project"          
+sh -c "mvn -s /maven-settings.xml \
            -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/poms/pom.xml \
            -Pcloud-publisher clean deploy $*"
