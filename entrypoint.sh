@@ -25,7 +25,7 @@ export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license \
                    -DaltDeploymentRepository=talend-custom-libs-release::default::http://bycnit-jenkins.westeurope.cloudapp.azure.com:8081/repository/talend-custom-libs-release/"
 
 # Maven command
-sh -c "mvn -e -X -s /maven-settings.xml -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/poms/jobs/joblets/jl_add_query_tag_0.1/pom.xml clean deploy -am -amd "
+sh -c "mvn -e -X -s /maven-settings.xml -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/poms/pom.xml clean deploy -am "
 
 echo "You selected ${INPUT_PROJECT} project"          
 #sh -c "mvn -s /maven-settings.xml \
