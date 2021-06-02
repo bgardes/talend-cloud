@@ -22,6 +22,8 @@ export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license \
                    -Dcloud.publisher.updateFlow=${INPUT_CLOUD_PUBLISHER_UPDATEFLOW} \
                    -Dcloud.publisher.environment=${INPUT_CLOUD_PUBLISHER_ENVIRONMENT} \
                    -Dcloud.publisher.workspace=${INPUT_CLOUD_PUBLISHER_WORKSPACE} \
+                   -Dcodes.compile.failOnError=false \
+                   -Dstudio.talendDebug=true \
                    -DaltDeploymentRepository=talend-custom-libs-release::default::http://bycnit-jenkins.westeurope.cloudapp.azure.com:8081/repository/talend-custom-libs-release/"
 
 # Maven command
