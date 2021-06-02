@@ -22,12 +22,10 @@ export MAVEN_OPTS="-Dlicense.path=${HOME}/secrets/license \
                    -Dcloud.publisher.updateFlow=${INPUT_CLOUD_PUBLISHER_UPDATEFLOW} \
                    -Dcloud.publisher.environment=${INPUT_CLOUD_PUBLISHER_ENVIRONMENT} \
                    -Dcloud.publisher.workspace=${INPUT_CLOUD_PUBLISHER_WORKSPACE} \
-                   -Dcodes.compile.failOnError=false \
-                   -Dstudio.talendDebug=true \
                    -DaltDeploymentRepository=talend-custom-libs-release::default::http://bycnit-jenkins.westeurope.cloudapp.azure.com:8081/repository/talend-custom-libs-release/"
 
 # Maven command
-sh -c "mvn -e -X -s /maven-settings.xml -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/poms/pom.xml -Pcloud-publisher clean deploy -am $*"
+sh -c "mvn -e -s /maven-settings.xml -f ${GITHUB_WORKSPACE}/${INPUT_PROJECT}/poms/pom.xml -Pcloud-publisher clean deploy -am $*"
 
 echo "You selected ${INPUT_PROJECT} project"          
 #sh -c "mvn -s /maven-settings.xml \
